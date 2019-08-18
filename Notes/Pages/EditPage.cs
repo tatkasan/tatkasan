@@ -42,6 +42,7 @@ namespace Notes.Pages
 
             if (int.TryParse(strId, out int intId))
             {
+                
                 Id = intId;
             }
             else

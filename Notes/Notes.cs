@@ -9,7 +9,7 @@ namespace Notes
     public class Notes : List<Note>
     {
         private int lastID=0;
-        //private List<Note> list = new List<Note>();
+
         public int Show()
         {
             return lastID;
@@ -27,9 +27,11 @@ namespace Notes
 
         public new Note Add (Note note)
         {
-         
-            lastID++;
-            note.Id = lastID;
+            if(Exists(note.Id))
+            {
+                lastID++;
+                note.Id = lastID;
+            }
             base.Add(note);
             return note;
 
@@ -47,17 +49,6 @@ namespace Notes
             Add(note);
             return note;
         }
-
-        //public List<string> ShowNotes(Notes notes)
-        //{
-        //    List<string> listString = new List<string>();
-        //    foreach (Note note in list)
-        //    {
-        //        listString.Add(note.ToString());
-        //    }
-        //    return listString;
-        //}
-
 
 
     }

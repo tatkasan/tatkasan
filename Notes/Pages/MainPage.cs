@@ -95,7 +95,7 @@ namespace Notes.Pages
         {
             ListPage listPage = new ListPage();
             listPage.ListNotes(notes);
-            Console.WriteLine("Do you want to to come back? y/n");
+            Console.WriteLine("Do you want to  come back? y/n");
             var usercommand = Console.ReadLine();
             if (Confirm(usercommand))
             {
@@ -109,7 +109,6 @@ namespace Notes.Pages
             }
 
         }
-
 
     }
 }
