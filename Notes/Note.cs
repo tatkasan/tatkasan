@@ -7,26 +7,22 @@ namespace Notes
     public class Note
     {
         public int Id { get; set; }
+
         public string Title { get; set; }
+
         public string Body { get; set; }
 
-        /*
-        public Note(int _id, string _title, string _body)
-        {
-            Id = _id;
-            Title = _title;
-            Body = _body;
 
-        }
-        */
-        public void ShowNoteTitle(Note note)
+        public Note(int id, string title, string body) { Id = id; Title = title; Body = body; }
+
+        public Note( string title, string body) { Id = 0; Title = title; Body = body; }
+
+
+        public string ShowNote()
         {
-            Console.WriteLine("ID  {0} , TITLE {1}", note.Id, note.Title);
+            return (Id.ToString()+ " - "+Title);
+            
         }
 
-        public void ShowNote(Note note)
-        {
-            Console.WriteLine("Note number {0}\n{1}\n{2}", note.Id, note.Title, note.Body);
-        }
     }
 }
